@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      background-color: black;
+    }
+
+    /* #container {
+      align-self: center;
+      justify-content: center;
+    } */
+    input {
+      width: 65px;
+    }
+    .inpNum {
+      display: none;
+    }
+    .inpNum input{
+      width: 80%;
+      height: 30px;
+      padding-left: 50%;
+      background-color: bisque;
+      box-shadow: inset 6px 8px 5px rgb(251, 250, 250);
+      border-radius: 10px;
+      padding-top: 5px;
+      font-size: larger;
+      border: none;
+    }
+    button{
+      display: flex;
+      justify-items: center;
+      align-self: center;
+      padding: 18px;
+      color: rgb(253, 253, 254);
+      font-weight: bolder;
+      background-color: rgb(189, 25, 25);
+      border: none;
+    }
+  </style>
+  <body>
+    <h1>Quadratic Equation</h1>
+    <div id="container">
+     
+      <button id="startButton" onclick="startQuadratic()">START</button>
+      <p class="inpNum val1">
+        first number
+        <input type="text" class="js-firstNumber" id="js-firstNumber"  placeholder="Enter first number" /><br><br>
+        <button onclick="gotoSecondInput()">Enter</button>
+      </p>
+      <p class="inpNum val2">
+        second number <input type="text" class="js-secondNumber" placeholder="Enter second number"/><br><br>
+        <button onclick="gotoThirdInput()">Enter</button>
+      </p>
+      <p class="inpNum val3">
+        third number <input type="text" class="js-thirdNumber" placeholder="Enter third number"/><br><br>
+        <button onclick="quadratic()">Result</button>
+      </p>
+      
+    </div>
+    <p class="js-result"></p>
+    
+  </body>
+  <script>
+  const firstElement = document.querySelector("#js-firstNumber");
+  const secondElement = document.querySelector(".js-secondNumber");
+  const thirdElement = document.querySelector(".js-thirdNumber");
+
+
+    function quadratic() {
+      if(isNaN(thirdElement.value) || thirdElement.value.trim() === ''){
+        alert('please enter the third value')
+      }
+      else{
+        const num1 = Number(firstElement.value);
+
+const num2 = Number(secondElement.value);
+
+const num3 = Number(thirdElement.value);
+
+const determinant = num2 * num2 - 4 * num1 * num3;
+
+//if (determinant > 0){
+
+let quadratic = (-num2 + Math.sqrt(determinant)) / (2 * num1);
+let quadratic2 = (-num2 - Math.sqrt(determinant)) / (2 * num1);
+
+//}
+//return[quadratic, quadratic2]
+//console.log(quadratic)
+
+document.querySelector(
+  ".js-result"
+).innerHTML = `Number x<sub>1</sub> = ${quadratic} <br> Number x<sub>2</sub> = ${quadratic2}`;
+start.style.display = 'block'
+numVal3.style.display = 'none'
+      }
+     
+    }
+
+
+
+    const start = document.getElementById('startButton')
+
+    const numVal1 = document.querySelector(".val1");
+    const numVal2 = document.querySelector(".val2");
+    const numVal3 = document.querySelector(".val3");
+
+    // function  to start 
+    function startQuadratic() {
+      firstElement.value = ''
+      secondElement.value = ''
+      thirdElement.value = ''
+      document.querySelector('.js-result').innerHTML = ''
+    
+        numVal1.style.display = 'block'
+        start.style.display = 'none'
+      
+    }
+
+    function gotoSecondInput(){
+        if(isNaN(firstElement.value) || firstElement.value.trim() === ''){
+           
+           alert('please enter a value')
+           console.log(firstElement.value)
+        }
+        else{
+          numVal1.style.display = 'none'
+           numVal2.style.display = 'block'
+           console.log(firstElement.value)
+        }
+    }
+
+    function gotoThirdInput(){
+     
+        if(isNaN(secondElement.value) || secondElement.value.trim() === ''){
+           
+           alert('please enter a value')
+        }
+        else{
+           numVal2.style.display = 'none'
+           numVal3.style.display = 'block'
+        }
+        return 
+    }
+    document.addEventListener('onkeydown', (e)=>{
+        if(e === "p"){
+          console.log('enter')
+        }
+    })
+  
+  </script>
+</html>

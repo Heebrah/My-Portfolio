@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/css/home.css" />
+    <link rel="stylesheet" href="./Assets/css/Homepage.css">
+
+    <style>
+body{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 80px;
+    
+}
+.flex1{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px solid whitesmoke;
+    background-color:white;
+    z-index: 30;
+   
+}
+
+.Bioxic img{
+    width: 100px;
+}
+
+        .register{
+            display: flex;
+            justify-content: space-around;
+
+        }
+        h1{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+        .myInput{
+            width: 450px;
+            border-radius: 30px;
+            height: 45px;
+            border: 1px rgb(226, 218, 218) solid;
+            padding-left: 40px;
+            margin-left: 50px;
+            
+
+        }
+        .myInput:focus{
+            border: 1px red solid;
+           
+            
+        }
+        .myInput::placeholder{
+            font-size: 16px;
+            color: rgb(202, 202, 196);
+            
+                       
+        }
+        form button{
+            background-color: black;
+            color: white;
+            border-radius: 40px;
+            padding: 12px 18px;
+        }
+        label{
+            font-family:sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .submit:hover{
+          background-color: beige;
+          color: black;
+        }
+        .myshop{
+          color: red;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="flex1">
+        <div class="Bioxic"><img src="../images/bloxic-img.png" alt=""></div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>About</li>
+                <li class="myshop"><a href="#">shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="tel:+2349027808621">contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div  class="register">
+        <div>
+            <h1>Sign Up</h1>
+            <form action="./productTable.html">
+                <label for="">Your name</label><br><br>
+                <input class="myInput" type="text" placeholder="Enter your name *" required><br><br>
+                <label for="">Email</label><br><br>
+                <input class="myInput" type="email" name="" id="" placeholder="Enter your Email" required><br><br>
+                <label for="">New password</label><br><br>
+                <input class="myInput" type="password" name="" id="" placeholder="Create password" required><br><br>
+                <input type="checkbox" name="" id="">
+                I agree to all terms and Condition<br><br>
+                <button class="submit" type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div>
+            <h1>Login Here</h1>
+            <form action="./productTable.html">
+                
+                <label for="">Email</label><br><br>
+                <input class="myInput" type="email" name="" id="" placeholder="Enter your Email" required><br><br>
+                <label for="">New password</label><br><br>
+                <input class="myInput" type="password" name="" id="" placeholder="Create password" required><br><br>
+                <input type="checkbox" name="" id="">
+                Remember me?<br><br>
+                <button class="submit" type="submit">Login Here</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    
+
+
+
+    <div class="product-choice">
+      <div class="product-text">
+        <div><span class="your-choice">|</span><h3> Products <em>Your Choice !</em></h3></div>
+        <div>
+          <ul class="ul">
+          <li class="trend">Trending</li>
+          <li>Best Seller</li>
+          <li>Music</li>
+          <li>Photography</li>
+          <li>Sports</li>
+       </ul></div>
+
+      </div>
+      <div class="product-image">
+      <div class="products-img">
+        <div class="myimage"><img src="../images/round-table.png" class="img-prod">
+          <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+          <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+          <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+      </div>
+          <img src="../images/rating-40.png" class="star" alt="">
+          <div>Masks 95 Percent 0.3-Mm </div>
+          <div>Particles</div>
+          <hr>
+          <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+      </div>
+     <div class="products-img">
+      <div class="myimage"><img src="../images/chair-1.png" class="img-prod">
+        <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+        <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+        <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+    </div>
+    <img src="../images/rating-40.png" class="star" alt="">
+    <div>Masks 95 Percent 0.3-Mm </div>
+    <div>Particles</div>
+    <hr>
+    <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+  
+  </div>
+     <div class="products-img">
+      <div class="myimage"><img src="../images/lamp.png" class="img-prod">
+      <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+      <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+      <div class="button-div"><a href=""><button class="cart-button">Add To cart</button></a></div>
+    </div>
+    <img src="../images/rating-40.png" class="star" alt="">
+    <div>Masks 95 Percent 0.3-Mm </div>
+    <div>Particles</div>
+    <hr>
+    <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+  </div>
+     <div class="products-img">
+      <div class="myimage"><img src="../images/chair-2.png" class="img-prod">
+      <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+      <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+      <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+    </div>
+    <img src="../images/rating-40.png" class="star" alt="">
+    <div>Masks 95 Percent 0.3-Mm </div>
+      <div>Particles</div>
+      <hr>
+      <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+</div>
+      </div>
+
+    </div>
+
+    <footer>
+      
+      <div class="images-div">
+        <div><img class="footer-pics" src="../images/images (16).jpg" alt=""></div>
+        <div><img class="footer-pics" src="../images/images (17).jpg" alt=""></div>
+        <div><img class="footer-pics" src="../images/images (18).jpg" alt=""></div>
+        <div><img class="footer-pics" src="../images/download (2).jpg" alt=""></div>
+        <div><img class="footer-pics" src="../images/download (13).jpg" alt=""></div>
+        <div><img class="footer-pics" src="../images/download (1).jpg" alt=""></div>
+  
+      </div>
+  
+  
+      <div class="details-div">
+        <div>
+          <div class="Bioxic"><img src="../images/bloxic-img.png" alt=""></div>
+          <p>4517 Washington Ave, Manchester, Kentucky 39495 Washington Ave, Manchester</p>
+  
+          <div class="adress-div">
+            <p><img class="Bioxic-img" src="../images/addressHome-removebg-preview.png" alt=""></p><p>254 Lilian blvd, Holbrook</p>
+          </div>
+          <div class="adress-div">
+            <p><img class="Bioxic-img" src="../images/call_icon.png" alt=""></p><p>1-800-654-3210</p>
+          </div>
+        </div>
+        <div>
+          
+          <ul class="no-tag">
+              <li><h2>Find it Fast</h2></li>
+              <li><a href="">Laptops & Computer</a></li>
+              <li><a href="">Camera & Photography</a></li>
+              <li><a href="">Smart Phones & Tablet</a></li>
+              <li><a href="">Video Games & Consoles</a></li>
+              <li><a href="">TV & Audio</a></li>
+          </ul>
+        </div>
+          <div>
+              
+              <ul class="no-tag">
+                  <li><h2>Quick Links</h2></li>
+                  <li><a href="">Your Account</a></li>
+                  <li><a href="">Returns & Exchanges</a></li>
+                  <li><a href="">Return Center</a></li>
+                  <li><a href="">Purchase History</a></li>
+                  <li><a href="">App Download</a></li>
+              </ul>
+          </div>
+           <div>
+              <ul>
+                  <li><h2>Service us</h2></li>
+                  <li><a href="">Support Center</a></li>
+                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a href="">Shopping</a></li>
+                  <li><a href="">Privacy Policy</a></li>
+                  <li><a href="">Help</a></li>
+              </ul>
+      </div>
+      
+        
+      </div>
+  
+      <div class="down-div">
+          (c) 2023. Powered by Theme. All right Reserved
+          <div class="message-div"><img class="message-img" src="../images/message.png" alt="">/a></div>
+          <div class="cards-div"><img class="card-img" src="../images/mastercard.png" alt="">
+                  <img class="card-img" src="../images/visa.png" alt="">
+                  <img class="otherCard" src="../images/otherCard.png" alt="">
+                  <img class="card-img" src="../images/Paypal.png" alt="">
+                 
+          </div>
+      </div>
+      </footer>
+
+
+
+</body>
+</html>

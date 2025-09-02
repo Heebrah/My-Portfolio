@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="./Assets/css/home.css" />
+    <link rel="stylesheet" href="./Assets/css/Homepage.css">
+    <style>
+      body{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 80px;
+    
+}
+.flex1{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px solid whitesmoke;
+    background-color:white;
+    z-index: 30;
+   
+}
+
+.Bioxic img{
+    width: 100px;
+}
+
+.menu-bar .ul li{
+    display: inline;
+   
+    margin-right: 15px;
+    text-decoration: none;
+}
+      .table-check{
+          display: flex;
+          justify-content: space-around;
+        
+      }
+      .product-show{
+          display: flex;
+          justify-content: start;
+          align-items: center;
+      }
+      .product-show img{
+          width: 60px;
+      }
+
+    
+      table{
+          border-collapse: collapse;
+          /* width: 500px; */
+      }
+      th{
+          padding: 10px;
+          text-align: left;
+          padding-left: 15px;
+          font-weight: 800;
+      }
+      .th-center{
+        text-align: center;
+      }
+      td{
+          padding: 5px;
+          text-align: center;
+      }
+    
+      
+      p{
+          margin: 5px;
+      }
+      
+      .show-info{
+          text-align: left;
+      }
+      .show-image{
+          border: 1px rgb(214, 211, 211) solid;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-items: center;
+          margin-right: 15px;
+          position: relative;
+          
+      }
+      .cancel{
+        background-color: rgb(209, 15, 15);
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        padding: 2px 4px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+      right: -12px;
+      cursor: pointer;
+    
+    }
+    .show-name{
+        font-weight: bold;
+    }
+
+    .checkout{
+        margin-right: 40px;
+        width: 400px;
+    }
+
+
+    
+.calculate{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.button1{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border: 0px;
+    margin-top: 40px;
+    }
+    .button1:hover{
+    background-color: purple;
+    color: plum;
+}
+    tr {
+        /* background-color: rgb(242, 235, 235); */
+        border-bottom: 1px rgb(220, 212, 212) solid;
+        margin: 5px;
+    }
+    th{
+      font-size: 20px;
+    }
+    .Cart-Table, .ship-Table{
+        border: 1px rgb(238, 234, 234) solid;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+      .Cart-Table div, .ship-Table div{
+        border-bottom: 1px rgb(240, 235, 235) solid;
+      }
+      .ship-Table div{
+        padding: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    .padd-div{
+      padding: 0px 50px;
+    }
+    .ship-Table button{
+      padding: 15px;
+      background-color: black;
+      color: white;
+      border: none;
+    }
+    .ship-div{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+  <div class="flex1">
+    <div class="Bioxic"><img src="../images/bloxic-img.png" alt=""></div>
+    <div class="menu-bar">
+        <ul class="ul">
+            <li><a href="home.html">Home</a></li>
+            <li>About</li>
+            <li><a href="./mylogin.html">shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="tel:+2349027808621">contact Us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+    <div class="table-check">
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th class="th-center">Price</th>
+                    <th class="th-center">Quantity</th>
+                    <th class="th-center">Total</th>
+                   
+                </tr>
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/chair-2.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Logech HeadPhone</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$32.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;219.00</td>
+                    
+                </tr>
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/bedfine-removebg-preview.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Asus Vivo</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$19.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;318.00</td>
+                    
+                </tr>
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/blue-chair-transformed.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Woolen Huddie</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$21.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;12.00</td>
+                </tr>
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/lamp.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Woolen Huddie</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$46.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;412.00</td>
+                    
+                </tr>
+
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/round-table.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Woolen Huddie</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$13.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;21.00</td>
+                    
+                </tr>
+
+                <tr>
+                    <td><div class="product-show">
+                        <div class="show-image"><img src="../images/chair-1.png" alt=""><div class="cancel">x</div></div>
+                        <div class="show-info">
+                            <p class="show-name">Woolen Huddie</p>
+                            <p>Color : Brown</p>
+                            <p>Quantity : 2</p>
+                        </div>
+                    </div></td>
+                    <td class="padd-div">$13.00</td>
+                    <td class="padd-div">- <button>1</button>+</td>
+                    <td class="padd-div">&#8364;21.00</td>
+                    
+                </tr>
+            
+        
+            </table>
+
+
+
+        </div>
+
+        <div class="checkout">
+            <h3>Cart Table</h3>
+            <div class="Cart-Table">
+                <div class="calculate"><div>Subtotals:</div><div>381.00</div></div>
+                <div class="calculate"><div>Totals:</div><div>381.00</div></div>
+                <div><input type="checkbox">Shipping & taxes calculated at checkout</div>
+                <div class="ship-div"><button class="button1">Proceed To Checkout</button></div>
+            </div>
+            <h3>Calculate Shipping</h3>
+            <div class="ship-Table">
+                <div>Bangladesh</div>
+                <div>Mirpur Dohs Dhaka-1200</div>
+                <div>Postal Cod</div>
+                <div><button>Calculate Shipping</button></div>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+    <div class="product-choice">
+        <div class="product-text">
+          <div><span class="your-choice">|</span><h3> Products <em>Your Choice !</em></h3></div>
+          <div>
+            <ul class="ul">
+            <li class="trend">Trending</li>
+            <li>Best Seller</li>
+            <li>Music</li>
+            <li>Photography</li>
+            <li>Sports</li>
+         </ul></div>
+  
+        </div>
+        <div class="product-image">
+        <div class="products-img">
+          <div class="myimage"><img src="../images/round-table.png" class="img-prod">
+            <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+            <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+            <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+        </div>
+            <img src="../images/rating-40.png" class="star" alt="">
+            <div>Masks 95 Percent 0.3-Mm </div>
+            <div>Particles</div>
+            <hr>
+            <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+        </div>
+       <div class="products-img">
+        <div class="myimage"><img src="../images/chair-1.png" class="img-prod">
+          <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+          <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+          <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+      </div>
+      <img src="../images/rating-40.png" class="star" alt="">
+      <div>Masks 95 Percent 0.3-Mm </div>
+      <div>Particles</div>
+      <hr>
+      <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+    
+    </div>
+       <div class="products-img">
+        <div class="myimage"><img src="../images/lamp.png" class="img-prod">
+        <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+        <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+        <div class="button-div"><a href=""><button class="cart-button">Add To cart</button></a></div>
+      </div>
+      <img src="../images/rating-40.png" class="star" alt="">
+      <div>Masks 95 Percent 0.3-Mm </div>
+      <div>Particles</div>
+      <hr>
+      <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+    </div>
+       <div class="products-img">
+        <div class="myimage"><img src="../images/chair-2.png" class="img-prod">
+        <div class="love-div"><img src="../images/love-heart.png" alt=""></div>
+        <div class="white-love"><img src="../images/white-love.png" alt=""></div>
+        <div class="button-div"><a href=""><button class="cart-button">Add to cart</button></a></div>
+      </div>
+      <img src="../images/rating-40.png" class="star" alt="">
+      <div>Masks 95 Percent 0.3-Mm </div>
+        <div>Particles</div>
+        <hr>
+        <div class="price-slice"><div><span class="splash">$239.52</span> $362.00</div><div>- <button>1</button> +</div></div>
+  </div>
+        </div>
+  
+      </div>
+
+
+      <footer>
+      
+        <div class="images-div">
+          <div><img class="footer-pics" src="../images/images (16).jpg" alt=""></div>
+          <div><img class="footer-pics" src="../images/images (17).jpg" alt=""></div>
+          <div><img class="footer-pics" src="../images/images (18).jpg" alt=""></div>
+          <div><img class="footer-pics" src="../images/download (2).jpg" alt=""></div>
+          <div><img class="footer-pics" src="../images/download (13).jpg" alt=""></div>
+          <div><img class="footer-pics" src="../images/download (1).jpg" alt=""></div>
+    
+        </div>
+    
+    
+        <div class="details-div">
+          <div>
+            <div class="Bioxic"><img src="../images/bloxic-img.png" alt=""></div>
+            <p>4517 Washington Ave, Manchester, Kentucky 39495 Washington Ave, Manchester</p>
+    
+            <div class="adress-div">
+              <p><img class="Bioxic-img" src="../images/addressHome-removebg-preview.png" alt=""></p><p>254 Lilian blvd, Holbrook</p>
+            </div>
+            <div class="adress-div">
+              <p><img class="Bioxic-img" src="../images/call_icon.png" alt=""></p><p>1-800-654-3210</p>
+            </div>
+          </div>
+          <div>
+            
+            <ul class="no-tag">
+                <li><h2>Find it Fast</h2></li>
+                <li><a href="">Laptops & Computer</a></li>
+                <li><a href="">Camera & Photography</a></li>
+                <li><a href="">Smart Phones & Tablet</a></li>
+                <li><a href="">Video Games & Consoles</a></li>
+                <li><a href="">TV & Audio</a></li>
+            </ul>
+          </div>
+            <div>
+                
+                <ul class="no-tag">
+                    <li><h2>Quick Links</h2></li>
+                    <li><a href="">Your Account</a></li>
+                    <li><a href="">Returns & Exchanges</a></li>
+                    <li><a href="">Return Center</a></li>
+                    <li><a href="">Purchase History</a></li>
+                    <li><a href="">App Download</a></li>
+                </ul>
+            </div>
+             <div>
+                <ul>
+                    <li><h2>Service us</h2></li>
+                    <li><a href="">Support Center</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Shopping</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+        </div>
+        
+          
+        </div>
+    
+        <div class="down-div">
+            (c) 2023. Powered by Theme. All right Reserved
+            <div class="message-div"><img class="message-img" src="../images/message.png" alt="">/a></div>
+            <div class="cards-div"><img class="card-img" src="../images/mastercard.png" alt="">
+                    <img class="card-img" src="../images/visa.png" alt="">
+                    <img class="otherCard" src="../images/otherCard.png" alt="">
+                    <img class="card-img" src="../images/Paypal.png" alt="">
+                   
+            
+            
+            
+            </div>
+        </div>
+        </footer>
+</body>
+</html>

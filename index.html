@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="" alt="">
+      <ul id="sidemenu">
+       <li> <a href="">Home</a></li>
+       <li> <a href="">About</a></li>
+        <li> <a href="#portfolio">Portfolios</a></li>
+        <li><a href="">Address</a></li>
+        <li><a href="">Files</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p id="text">Welcome to my Portfolio</p>
+      <h1>Hi, I'm <span>Ibrahim</span><br>A Tech Support Engineer</h1>
+      
+    </div>
+  </div>
+</div>
+    
+       
+        <div class="container">
+          <div class="about-me">
+             <div id="about-img"><img src="./my-images/jacket.jpg"></div>
+             <div id="about-info">
+              <h2>About Me </h2>
+              <ul>
+                <li>Am an IT support Engineer with years experience in <b>computer software</b> and hardware maintainance</li>
+                <li>Learning about cybersecurity using some tools such as kali, burp suite, nmap etc.</li>
+                <li>Experience Aws platform and some devOps tool like docker</li>
+                <li>Worked on building a simple website / web-app as a front-end developer using
+                   tools like html,css,javascript & React js</li>
+              </ul>
+          
+              <div class="tab-title">
+                <p class="tab-links active-link"onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                <li><span>Network & System</span><br>Designing and configurations of System & network device</li>
+                <li><span>Web Development</span><br>Web app Development</li>
+                <li><span>Git & Github</span><br>working with Git and github branch</li>
+                <li><span>Cloud computing</span><br>Using instance, S3 bucket, Load balancer etc on AWS</li>
+                <li><span>DevOps tool</span><br>docker, ansible, terraform</li>
+              
+
+                
+                </ul>
+              </div>
+              <div class="tab-contents" id="Experience">
+                <ul><li><span>2023 - 2024</span><br>Front end at New Horizons</li>
+                <li><span>Feb 2024 - July</span><br>Networking at Deft Rain</li>
+                <li><span>2022 - present</span><br>IT support Engineer at NowNow</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Education">
+                <ul><li><span>2023 - present</span><br>Front end at New Horizons</li>
+                  <li><span>Feb 2024 - July</span><br>Networking at Deft Rain</li>
+                <li><span>Aug 2024 - January 2025</span><br>cybersecurity</li>
+                <li><span>Feb 2025 - July 2025</span><br>Ethical Hacking</li>
+
+                </ul>
+              </div>
+             </div>
+          
+          </div>
+        </div>
+
+
+        <!-- ------service------- -->
+        <div id="service">
+          <div class="container">
+            <h1 class="sub-title">My Service</h1>
+            <div class="service-list">
+              <div>
+                <i class="fa-brands fa-app-store"></i>
+                <i class="fa-regular fa-map"></i>
+                <h2>System & Networking</h2>
+                <p>Have a great deal of experience in designing computer networks
+                  , configurations and troubleshooting
+                </p>
+                   <a href="#">learn more</a>
+              </div>
+              <div>
+                <i class="fa-sharp fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Proficient in front-end web design using the html,css, javascript
+                  and frame-works like react js
+                </p>
+                   <a href="#">learn more</a>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>App Deployment</h2>
+                <p>Well familiar with using tools like docker, terraform, aws platform to deploy website and app</p>
+                   <a href="#">learn more</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- portfolio -->
+        <div id="portfolio">
+          <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+              <div class="work">
+                <img src="./my-images/A level mathematics.jpg">
+                <div class="layer">
+                  <h3>Solve mathematics</h3>
+                  <p>This apps allow you to work on some mathematics problem and solve it using the parameters
+                  </p>
+                  <a href="./quadraticEqu.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+
+              <div class="work">
+                <img src="./my-images/todo.jpg">
+                <div class="layer">
+                  <h3>To-do List App</h3>
+                  <p>The app connects makes you generate your to do list by giving a reminder
+                  </p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+
+              <div class="work">
+                <img src="./my-images/movie.avif">
+                <div class="layer">
+                  <h3>Movie App</h3>
+                  <p>The app generate movie using api
+                  </p>
+                  <a href="./Api-Project/movie.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+
+
+              <!-- <div class="work hide">
+                <img src="./my-images/youtube.webp">
+                <div class="layer">
+                  <h3>Social Media App</h3>
+                  <p>The app connects you to talented people in the world
+                    Download it from play store
+                  </p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work hide">
+                <img src="./my-images/rock-paper-scissors-neon-icons.jpg">
+                <div class="layer">
+                  <h3>Rock Paper Scissors</h3>
+                  <p>this is a game app of rock paper scissors
+                  </p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+
+              <div class="work hide">
+                <img src="./my-images/web-template-website-design-concept_53876-125608.avif">
+                <div class="layer">
+                  <h3>Social Media App</h3>
+                  <p>The app connects you to talented people in the world
+                    Download it from play store
+                  </p>
+                  <a href="./Homeshow.html/home.html">click me<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work hide"  id="onme">
+                <img src="./images/weather-Img.jpg">
+                <div class="layer">
+                  <h3>Weather App</h3>
+                  <p>The app uses an api in checking out weather of a location
+                  </p>
+                  <a href="./weatherApp/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div> -->
+            
+            </div>
+            <a href="./design.html" class="btn more">See More</a>
+          </div>
+        </div>
+
+        <div id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><a href="ibrahimola08@gmail.com">Ibrahimola08@gmail.com</a></p>
+                <p>09027808621</p>
+                <div class="social-icons">
+                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  <a href="http://linkedin.com/in/ibrahim-busari-8b4675253"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://github.com/Heebrah"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1mNekBIEwxtR4FrbWcyK0CSb7tPNrUL1I/view?usp=sharing" class="btn btn2" download>Download CV</a>
+              </div>
+              <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>Copyright @ Ibrahim </p>
+        </div>
+
+          <script src="about.js"></script>
+          <script src="https://kit.fontawesome.com/465f3f79cc.js" crossorigin="anonymous"></script>
+</body>
+</html>

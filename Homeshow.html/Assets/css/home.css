@@ -1,0 +1,811 @@
+.body{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 70px;
+    
+}
+
+
+.container, .top-container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  
+}
+
+
+.heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    /* left: 120px;
+    right: 120px; */
+    left: 0;
+    right: 0;
+    z-index: 20;
+    top: 0;
+   
+    background-color: white;
+   
+    border-bottom: 5px solid whitesmoke;
+    padding-bottom: 10px;
+}
+.Bioxic{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    
+}
+.Bioxic img{
+    width: 100px;
+}
+
+.searching-div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+}
+.search-image{
+    width: 20px;
+}
+.search-div{
+    display: flex;
+    display: inline;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.select-product{
+    height: 40px;
+}
+.search-input{
+    height: 40px;
+    flex: 1;
+    width: 0px;
+    align-self: center;
+}
+
+.top-right-icons{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.menu-bar ul li{
+    display: inline;
+    margin-right: 15px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.blur{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle,white,rgb(241, 161, 198));
+    filter: blur(8px);
+    position: absolute;
+    bottom: -10px;
+    left: 170px;
+    z-index: -1;
+
+    
+}
+
+
+.optioning{
+    display: inline;
+}
+
+.search-product-button{
+    height: 40px;
+    background-color: white;
+}
+
+
+.search-button{
+    background-color: black;
+    height: 40px;
+    align-self: center;
+    
+}
+button img{
+    width: 30px;
+}
+.logo-div{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+
+.logo-div img{
+    width: 25px;
+    
+}
+.alarm{
+    width: 15px;
+    
+}
+.love{
+    width: 20px;
+    
+}
+.love-notify{
+    position: relative;
+}
+.num3{
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 4px;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    font-size: 10px;
+    
+}
+.num2{
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 4px;
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    font-size: 8px;
+}
+
+
+.flag-button{
+    width: 100px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(240, 231, 231);
+    height: 35px;
+}
+.flag-div{
+    position: relative;
+}
+.Language-change{
+    position: absolute;
+    left: -50px;
+    top: 40px;
+   
+    transition: all 3s;
+}
+.flag-div:active .Language-change{
+    opacity: 1;
+    z-index: 10;
+}
+
+
+.left-div{
+    height: 200px;
+   
+}
+th{
+    height: 50px;
+    
+}
+.topCont{
+ 
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items:    center;
+   
+
+}
+
+.topCont img, .cont-relative img, .cont img{
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.flag-image{
+    width: 30px;
+}
+
+.cont{
+   
+    height: 60px;
+    border-bottom: 1px rgb(251, 252, 252) solid;
+    background-color: rgb(232, 237, 237);
+    display: flex;
+    align-items: center;
+    
+}
+.cont-relative{
+    height: 60px;
+    border-bottom: 1px rgb(251, 252, 252) solid;
+    background-color: rgb(232, 237, 237);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.cont-relative:hover .sub-cont{
+    opacity: 1;
+    z-index: 5;
+    background-color: rgb(232, 237, 237);
+    animation: myView 1s ease-out 1 alternate-reverse;
+   
+}
+
+@keyframes myView {
+    from {top: 0} to {top: 30px}
+}
+
+.sub-cont{
+    display: grid;
+    grid-template-rows: 100px, 100px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    opacity: 0;
+    z-index: -1;
+    
+}
+.my-sub-cont{
+    height: 60px;
+    border-bottom: 1px rgb(232, 236, 236) solid;
+    background-color: rgb(250, 250, 245);
+    display: flex;
+    align-items: center;
+    width: 200px;
+       
+}
+.my-sub-cont:hover{
+    background: rgb(250, 245, 245);
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.cont:hover, .cont-relative:hover{
+    height: 60px;
+   
+    background-color: rgb(227, 222, 222);
+    font-size: 20px;
+    
+}
+
+.cont img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+img{
+ width: 400px;
+}
+
+.right-div{
+    display: flex;
+    height: 550px;
+    align-items: center;
+    background-color: rgb(232, 237, 237);
+    z-index: 4;
+
+}
+
+.organic{
+    border: 1px solid black;
+    padding: 3px 6px;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(46, 43, 43);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    animation-name: first;
+    animation-duration: 1.8s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+   
+   
+  
+}
+
+.organic-info-div{
+    margin-left: 70px;
+    width: 300px;
+    margin-top: -70px;
+    margin-right: 60px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction:  alternate-reverse;
+    animation-delay: 4s;
+    animation-timing-function: ease-out;
+
+}
+.furniture-image-div{
+    position: relative;
+    margin-top: 30px;
+}
+.furniture{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    animation-name: first;
+    animation-duration: 2.0s;
+    animation-direction:  normal;
+    
+}
+.increase{
+    position: relative;
+    animation-name: first;
+    animation-duration: 2.7s;
+    animation-direction:  normal;
+}
+.starting{
+    position: relative;
+    animation-name: first;
+    animation-duration: 3s;
+    animation-direction:  normal;
+}
+
+.circle-bed{
+    width: 350px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 150px;
+    height: 350px;
+    z-index: -1;
+}
+.circle-bed-2{
+    width: 300px;
+    background: rgb(234, 223, 223);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 180px;
+    height: 300px;
+    z-index: -1;
+}
+
+.dotted-pic{
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  
+}
+.see-collection{
+    background-color: black;
+    color: white;
+    width: 140px;
+    padding: 10px;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+    animation: collection 2.5s  1  normal;
+    animation-timing-function:ease-out;
+    animation-fill-mode: forwards;
+    
+}
+.see-collection:hover{
+    background-color: blanchedalmond;
+    color: blue;
+}
+.see-collection:active{
+    background-color: red;
+    color: white;
+}
+
+.Furniture-image{
+
+width: 550px;
+z-index: 10;
+
+
+
+}
+
+
+.first-down-div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+
+    
+}
+
+
+.bottom-text{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 240, 238);
+    align-items: center;
+    padding-top: 10px;
+    border: 1px rgb(208, 214, 211) solid;
+   
+}
+
+.bottom-text img{
+    width: 40px;
+    margin-right: 15px;
+}
+
+p{
+    margin-top: 3px;
+}
+
+span{
+    color: rgb(188, 7, 7);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select{
+    border: none;
+   
+}
+.home{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+   
+    
+}
+.redColor-home{
+    color: red;
+}
+.list-home{
+    position: relative;
+    
+}
+li{
+    cursor: pointer;
+}
+
+
+.home-option{
+    position: absolute;
+    top: 50px;
+    left: -5px;
+    z-index: 4;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    padding: 0px 20px;
+    opacity: 0;
+    }
+
+.myHome-option{
+    height: 40px;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.home:hover .home-option{
+    opacity: 1;
+    z-index: 5;
+}
+
+
+
+.greater-sign{
+    font-weight: bolder;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 95px;
+}
+
+.adress-div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+
+@keyframes example {
+   from {left: 200px} to {left: 0px}
+  }
+
+  @keyframes first {
+    from {left: 200px} to {left: 0px}
+  }
+
+  @keyframes collection {
+    from {left: 200px} to {left: 0px;}
+  }
+
+
+
+
+
+
+
+
+
+
+
+#collection-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(232, 237, 237);
+    height: 300px;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+.left-info{
+    margin-left: 80px;
+    margin-top: 30px;
+   
+}
+
+.star-div{
+    position: absolute;
+    bottom: 10px;
+    left: -60px;
+}
+
+.star-image{
+    width: 70px;
+}
+
+.sofa-img{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 80px;
+    z-index: 20px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+
+}
+
+.sofa-chair{
+    width: 250px;
+}
+
+
+
+.product-text{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+.your-choice{
+    display: inline;
+    font-size: 30px;
+}
+.h3{
+    display: inline;
+}
+
+div .ul li{
+    display: inline;
+    list-style: none;
+    padding: 15px;
+    font-family: sans-serif;
+    font-size:small;
+    font-weight: lighter;
+   
+    
+}
+div .ul li:hover{
+    color: red;
+}
+.trend{
+    text-decoration: underline;
+    text-decoration-color: red;
+    
+}
+
+
+
+.product-image{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 250px;
+    margin-left: 30px;
+    margin-right: 30px;
+    column-gap: 15px;
+    margin-top: 10px;
+  
+    
+
+
+}
+.products-img{
+  
+  position: relative;
+}
+.myimage{
+    background-color: rgb(232, 237, 237);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.star{
+    width: 90px;
+}
+
+.img-prod{
+   width: 300px;
+}
+
+.love-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+}
+.white-love{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    opacity: 0;
+}
+.white-love img{
+    width: 30px;
+}
+
+.love-div img{
+    width: 20px;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+
+
+    
+}
+.cart-button{
+    padding: 15px 20px;
+    opacity: 0;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    
+  
+}
+
+.myimage:hover .cart-button{
+    opacity: 1;
+   
+   
+}
+
+ .cart-button:hover{
+    background-color: red;
+    color: white;
+    opacity: 1;
+   
+}
+
+.arrow{
+    font-weight: lighter;
+    position: relative;
+    left: 14.6%;
+    top: 5px;
+    width: 17px;
+}
+.myimage:hover .love-div{
+    background-color: red;
+    color: white;
+    opacity: 0;
+}
+.myimage:hover .white-love{
+    opacity: 1;
+}
+
+
+em{
+    display: inline;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: medium;
+}
+
+span{
+    color: red;
+    position: relative;
+   
+    font-size: small;
+}
+
+.content{
+ 
+    background-color: gainsboro;
+   
+}
+section{
+    font-size: larger;
+    font-family:sans-serif;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .sp{
+        font-weight: bold;
+        font-size: medium;
+    }
+   .year{
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+
+   }
+
+   .deals{
+    font: 15px sans-serif;
+   }
+
+   .price-slice{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+   
+   }
+
+   .splash{
+    color: red;
+    text-decoration: line-through;
+    font-weight: 600;
+    font-size: 16px;
+   }
+
+    .product-choice{
+    margin-bottom: 100px;
+   }

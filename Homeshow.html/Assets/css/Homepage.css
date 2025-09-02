@@ -1,0 +1,116 @@
+.flex1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Bioxic-img{
+    width: 30px;
+    height: 100%;
+}
+.menu-bar ul li{
+    display: inline;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.images-div{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 170px;
+    border-top: 1px solid rgb(226, 226, 236);
+    justify-content: center;
+    align-items: flex-end;
+}
+.images-div img{
+    height: 150px;
+}
+.footer-pics{
+    width: 100%;
+    height: 180px;
+}
+
+.details-div{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    height: 300px;
+   
+    justify-content: center;
+}
+a, .details-div{
+text-decoration: none;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+li{
+    margin-bottom: 20px;
+}
+li:first-child{
+    list-style: none;
+}
+.no-tag li{
+      list-style: none;
+}
+
+a{
+    color: black;
+}
+
+.address-image-div{
+    background: black;
+    width: 30px;
+    border-radius: 50%;
+    
+}
+.address-image-div img{
+    width: 20px;
+}
+
+
+.down-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(234, 223, 223);
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(251, 252, 253);
+    padding-top: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.message-div{
+    width: 70px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    padding: 3px;
+  
+}
+
+.message-img{
+    width: 15px;
+    height: 40%;
+}
+.cards-div{
+    display: flex;
+    align-items: center;
+}
+.card-img{
+    width: 40px;
+    height: 70%;
+}
+.otherCard{
+    width: 80px;
+    height: 80%;
+}
+
+footer{
+    margin-top: 150px;
+}

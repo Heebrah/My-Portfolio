@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<style>
+	div, .output-list {
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: 200px 150px 150px;
+		font-size: 20px;
+		column-gap: 5px;
+	}
+
+	button {
+		width: 150px;
+		height: 35px;
+		background: red;
+		border: none;
+		color: white;
+	}
+</style>
+
+<body>
+	
+		<p>
+		<h3>To do list practice 1</h3>
+		</p>
+		<div>
+		<input type="text" placeholder="To do name" class="js-input-todo">
+		<input type="date" placeholder="YYYY-MM-DD" class="js-date">
+
+		<button onclick="addTodo()" id="addOf">add</button>
+	</div>
+
+
+	<div class="js-output-list output-list"></div>
+
+
+
+</body>
+<script>
+
+
+
+const todoList = [];
+
+	function renderTodoList() {
+		let todoHtmlList = '';
+
+		todoList.forEach(function(todoObject, index){
+			const name = todoObject.name;
+			const dueDate = todoObject.dueDate;
+			if (todoObject.name.trim() === ''){
+				return;
+			}
+			if (todoObject.dueDate.trim() === ''){
+				return;
+			}
+		
+			
+		
+
+			const html = `<div>${name}</div> <div>${dueDate}</div>
+                 <div><button onclick ="todoList.splice(${index}, 1);
+                renderTodoList();">delete</button></div>`;
+			todoHtmlList += html;
+			
+		});
+	
+			
+		document.querySelector('.js-output-list').innerHTML = todoHtmlList;
+		
+		localStorage.setItem('Store', JSON.stringify(todoHtmlList));
+		
+		}
+		
+		
+	
+	
+
+
+
+
+
+	function addTodo() {
+		localStorage.getItem('Store')
+		const addElement = document.querySelector('.js-input-todo');
+		const username = addElement.value;
+
+		const dataElement = document.querySelector('.js-date')
+		const dateIn = dataElement.value
+
+		todoList.push({ name: username,  dueDate: dateIn });
+		
+		// console.log(name);
+
+		addElement.value = '';
+		renderTodoList();
+	}
+	
+
+
+
+
+</script>
+
+</html>

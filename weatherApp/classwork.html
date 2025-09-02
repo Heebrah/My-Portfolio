@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="exchangeRate()">click me</button>
+    <button onclick="exchangeRate2()">click me 2</button>
+
+    <input type="text" id="convert">
+    <div id="display"></div>
+    <script>
+       
+
+
+       async function exchangeRate(){
+            const url = 'https://v6.exchangerate-api.com/v6/34fd204b29399bacd023acfa/latest/USD'
+
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+
+                if (res.ok) {
+                    console.log(data)
+                    
+        } else {
+            alert('City not found. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error fetching exchange rate:', error);
+    }
+        
+        }
+
+
+        async function exchangeRate2(){
+            const url = 'https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_9kPvfRSwOLcbWWT9sHGn5XIi9t93vgYDYUQMQxZC'
+        
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+
+                if (res.ok) {
+           console.log(data)
+        } else {
+            alert('City not found. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error fetching exchange rate:', error);
+    }
+        
+        }
+
+
+        // function convertExchange(data){
+        //    let rate = document.querySelector('#convert').value
+
+        // //    $('#convert').text(data.conversion_rates.rate);
+        //    if (rate === data.conversion_rates){
+        //     console.log(rate)
+        //    }
+        //    else{
+        //     console.log('invalid input')
+        //    }
+           
+
+
+        // }
+    
+    </script>
+    
+</body>
+</html>
