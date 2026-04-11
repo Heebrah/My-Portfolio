@@ -1,5 +1,5 @@
-const apiKey = '61d5b70f';
 const apiUrl = 'http://www.omdbapi.com/';
+const apiKey = '61d5b70f';
 
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
@@ -45,8 +45,7 @@ function displayMovies(movies) {
             <p>${movie.Year}</p>
         `;
         movieElement.addEventListener('click', () => displayMovieDetails(movie.imdbID));
-        movieContainer.appendChild(movieElement)
-        movieList.appendChild(movieContainer);
+       movieContainer.appendChild(movieElement);
     });
     
 }

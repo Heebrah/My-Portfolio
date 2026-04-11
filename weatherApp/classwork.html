@@ -10,16 +10,18 @@
 <body>
 
     <button onclick="exchangeRate()">click me</button>
-    <button onclick="exchangeRate2()">click me 2</button>
+    <button onclick="exchangeRate2()">Display currency Rate</button>
 
     <input type="text" id="convert">
     <div id="display"></div>
+
+
     <script>
        
 
 
        async function exchangeRate(){
-            const url = 'https://v6.exchangerate-api.com/v6/34fd204b29399bacd023acfa/latest/USD'
+            const url = 'https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_9kPvfRSwOLcbWWT9sHGn5XIi9t93vgYDYUQMQxZC'
 
             try {
                 const res = await fetch(url);
@@ -39,14 +41,46 @@
 
 
         async function exchangeRate2(){
-            const url = 'https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_9kPvfRSwOLcbWWT9sHGn5XIi9t93vgYDYUQMQxZC'
+            const url = 'https://v6.exchangerate-api.com/v6/34fd204b29399bacd023acfa/latest/USD'
         
             try {
                 const res = await fetch(url);
                 const data = await res.json();
 
                 if (res.ok) {
-           console.log(data)
+        //    console.log(data.data)
+         const output = [data.conversion_rates];
+
+output.map((item) => {
+  let html = `
+    <table border="1" cellspacing="0" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Currency</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  for (const [currency, rate] of Object.entries(item)) {
+    html += `
+      <tr>
+        <td>${currency}</td>
+        <td>${rate}</td>
+      </tr>
+    `;
+  }
+
+  html += `
+      </tbody>
+    </table>
+  `;
+
+  document.querySelector("#display").innerHTML = html;
+  console.log(item);
+});
+
         } else {
             alert('City not found. Please try again.');
         }

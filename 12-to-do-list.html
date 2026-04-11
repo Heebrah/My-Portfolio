@@ -35,6 +35,9 @@
 
 	<div class="js-output-list output-list"></div>
 
+	<button onclick="checkAllOutput()">Check My Todos</button>
+	<div class="displayTodo"></div>
+
 
 
 </body>
@@ -70,13 +73,21 @@ const todoList = [];
 			
 		document.querySelector('.js-output-list').innerHTML = todoHtmlList;
 		
-		localStorage.setItem('Store', JSON.stringify(todoHtmlList));
+		localStorage.setItem('Store', JSON.stringify(todoList));
 		
 		}
 		
 		
 	
-	
+	function checkAllOutput() {
+		const storedTodos = localStorage.getItem('Store');
+		if (storedTodos) {
+			document.querySelector('.displayTodo').innerHTML = storedTodos;
+		}
+		else {
+			document.querySelector('.displayTodo').innerHTML = 'No todos found.';	
+		}
+	}
 
 
 
