@@ -1,24 +1,51 @@
+
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = "html-app"
+        CONTAINER_NAME = "html-container"
+    }
+
     stages {
-        stage('Build') {
+
+        stage('Checkout Code') {
             steps {
-                echo 'Building...'
-                // Add your build commands here
+                // Pull code from Git repository
+                git 'https://github.com/Heebrah/My-Portfolio.git'
             }
         }
-        stage('Test') {
+
+        stage('Build Docker Image') {
             steps {
-                echo 'Testing...'
-                // Add your test commands here
+                script {
+                    bat "docker build -t %IMAGE_NAME% ."
+                }
             }
         }
-        stage('Deploy') {
+
+        stage('Run Docker Container') {
             steps {
-                echo 'Deploying...'
-                // Add your deploy commands here
+                script {
+                    // Stop old container if it exists
+                    bat "docker stop %CONTAINER_NAME% || exit 0"
+                    bat "docker rm %CONTAINER_NAME% || exit 0"
+
+                    // Run new container
+                    bat "docker run -d -p 8080:80 --name %CONTAINER_NAME% %IMAGE_NAME%"
+                }
             }
+        }
+
+    }
+
+    post {
+        success {
+            echo 'Docker image built and container started successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }
