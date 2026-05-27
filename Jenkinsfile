@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "html-app"
-        CONTAINER_NAME = "html-container"
+        IMAGE_NAME = "portfolio-app"
+        CONTAINER_NAME = "portfolio-container"
     }
 
     stages {
