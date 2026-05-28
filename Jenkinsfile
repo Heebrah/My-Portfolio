@@ -13,7 +13,7 @@ pipeline {
             steps {
                 git branch: 'main',
                 // Pull code from Git repositorygit
-                git 'https://github.com/Heebrah/My-Portfolio.git'
+                url: 'https://github.com/Heebrah/My-Portfolio.git'
             }
         }
 
