@@ -11,6 +11,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
+                git branch: 'main',
                 // Pull code from Git repositorygit
                 git 'https://github.com/Heebrah/My-Portfolio.git'
             }
