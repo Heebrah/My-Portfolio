@@ -6,42 +6,12 @@ pipeline {
     }
 
     stages {
-
-        stage('Build') {
+        stage('Docker Login') {
             steps {
-                bat 'docker build -t ibdevop/ng:latest .'
+                bat '''
+                echo %DOCKERHUB_CREDENTIALS_PSW% | docker login -u %DOCKERHUB_CREDENTIALS_USR% --password-stdin
+                '''
             }
-        }
-
-        stage('Login') {
-            steps {
-                withCredentials([
-                    usernamePassword(
-                        credentialsId: 'ibdevop-dockerhub',
-                        usernameVariable: 'DOCKERHUB_USERNAME',
-                        passwordVariable: 'DOCKERHUB_PASSWORD'
-                    )
-                ]) {
-                    bat 'echo %DOCKERHUB_PASSWORD% | docker login -u %DOCKERHUB_USERNAME% --password-stdin'
-                }
-            }
-        }
-
-        stage('Push') {
-            steps {
-                bat 'docker push ibdevop/jenkins:latest'
-            }
-        }
-
-    }
-    post {
-        success {
-            echo 'Docker image built and container started successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed!'
         }
     }
-
 }
