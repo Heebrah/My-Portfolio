@@ -2,59 +2,33 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_NAME = "portfolio-app"
-        CONTAINER_NAME = "portfolio-container"
-    }
+   environment{
+    DOCKERHUB_CREDENTIALS = credentials('ibdevop-dockerhub')
+   }
 
-    stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                // Pull code from Git repositorygit
-                url: 'https://github.com/Heebrah/My-Portfolio.git'
-            }
-        }
-        stage('connect to docker registry') {
-            steps {
-                script {
-                    
-                     bat "docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%"
-                }
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    bat "docker build -t %IMAGE_NAME% ."
-                }
-            }
-        }
-
-        stage('Run Docker Container') {
-            steps {
-                script {
-                    // Stop old container if it exists
-                    bat "docker stop %CONTAINER_NAME% || exit 0"
-                    bat "docker rm %CONTAINER_NAME% || exit 0"
-
-                    // Run new container
-                    bat "docker run -d -p 8080:80 --name %CONTAINER_NAME% %IMAGE_NAME%"
-                }
-            }
-        }
-
-    }
-
-    post {
-        success {
-            echo 'Docker image built and container started successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed!'
+   stages{
+    stage('Build') {
+        steps {
+           bat 'docker build -t ibdevop/jenkins:latest .'
         }
     }
+   }
+
+   stages{
+    stage('login'){
+        steps {
+            withCredentials([usernamePassword(credentialsId: 'ibdevop-dockerhub', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+                bat "echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin"
+            }
+        }
+    }
+   }
+
+   stages{
+    stage('Push') {
+        steps {
+           bat 'docker push ibdevop/jenkins:latest'
+        }
+    }
+   }
 }
