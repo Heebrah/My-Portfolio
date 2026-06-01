@@ -34,4 +34,14 @@ pipeline {
         }
 
     }
+    post {
+        success {
+            echo 'Docker image built and container started successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+
 }
