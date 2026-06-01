@@ -16,6 +16,14 @@ pipeline {
                 url: 'https://github.com/Heebrah/My-Portfolio.git'
             }
         }
+        stage('connect to docker registry') {
+            steps {
+                script {
+                    
+                     bat "docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%"
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
