@@ -9,7 +9,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'docker build -t ibdevop/jenkins:latest .'
+                bat 'docker build -t ibdevop/ng:latest .'
             }
         }
 
