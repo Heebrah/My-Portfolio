@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+     agent any
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('ibdevop-dockerhub')
@@ -31,6 +31,7 @@ pipeline {
                 bat 'docker push ibdevop/jenkins:latest'
             }
         }
+        }
 
     }
     post {
@@ -42,5 +43,4 @@ pipeline {
             echo 'Pipeline failed!'
         }
     }
-
 }
