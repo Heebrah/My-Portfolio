@@ -16,6 +16,12 @@ pipeline {
             }
             
         }
+        stage('Stop Existing Container') {
+            steps {
+                bat "docker stop jenkins-container || echo 'No existing container to stop'"
+                bat "docker rm jenkins-container || echo 'No existing container to remove'"
+            }
+        }
         stage('Run Docker Container') {
             steps {
                 bat "docker run -d --name jenkins-container -p 8090:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}"
