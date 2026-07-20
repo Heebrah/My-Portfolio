@@ -10,6 +10,15 @@ const movieContainer = document.getElementById('image-container')
 
 searchButton.addEventListener('click', searchMovie);
 
+window.addEventListener('keydown', ()=>{
+    if (event.key === "Enter") {
+    searchMovie()
+}
+})
+
+//
+
+
 function searchMovie() {
     movieContainer.innerHTML = ''
      movieDetails.innerHTML = ''
