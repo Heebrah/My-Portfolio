@@ -11,8 +11,16 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 bat "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
+                bat "docker images ${DOCKER_IMAGE}:${DOCKER_TAG}"   
+
             }
+            
         }
+        stage('Run Docker Container') {
+            steps {
+                bat "docker run -d --name jenkins-container -p 8090:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}"
+            }
+        }   
 
         stage('Login to Docker Hub') {
             steps {
